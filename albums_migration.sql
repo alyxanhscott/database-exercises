@@ -10,6 +10,9 @@ CREATE TABLE albums (
   PRIMARY KEY (id)
 );
 
+ALTER TABLE albums
+  ADD UNIQUE (artist, name);
+
 CREATE TABLE contacts (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(50) NOT NULL,

@@ -73,3 +73,4 @@ VALUES ( 'Michael Jackson','Thriller',1982,'Pop, Rock, R&B',66 ),
   ( 'Tracy Chapman','Tracy Chapman',1988,'Folk rock',20 ),
   ( 'Various artists','Flashdance: Original Soundtrack from the Motion Picture',1983,'Soundtrack',20 ),
   ( 'Whitney Houston','Whitney',1987,'Pop, R&B',20 );
+
