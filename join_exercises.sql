@@ -97,8 +97,28 @@ ON departments.dept_no = dept_manager.dept_no
 WHERE dept_manager.to_date like '9999-%'
 AND salaries.to_date LIKE '9999-%';
 
+DESCRIBE employees;
+DESCRIBE departments;
+DESCRIBE dept_manager;
+DESCRIBE dept_emp;
 
-
+# Find the names of all current employees, their department name,
+#  and their current manager's name.
+SELECT concat(employees.first_name, ' ', employees.last_name) AS 'Employee',
+departments.dept_name AS 'Department', mgmt.first_name AS 'Manager first name',
+' ', mgmt.last_name AS 'Manager Last Name'
+FROM employees
+JOIN dept_emp
+ON dept_emp.emp_no = employees.emp_no
+JOIN departments
+ON departments.dept_no = dept_emp.dept_no
+JOIN dept_manager
+ON dept_manager.dept_no = departments.dept_no
+JOIN employees mgmt
+ON mgmt.emp_no = dept_manager.emp_no
+WHERE dept_emp.to_date LIKE '9999-%'
+and dept_manager.to_date like '9999-%'
+ORDER BY employees.first_name;
 
 
 
