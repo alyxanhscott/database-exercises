@@ -31,3 +31,4 @@ VALUES ('tristan', '1234567895', 'tht@gmail.com', now(), now()),
 
 SELECT * from contacts;
 # mysql -u codeup_test_user -p < albums_migration.sql
+
